@@ -6,5 +6,5 @@ db
 logs
 .env
 
-src/config/default.json
-src/config/default.debug.json
+default.json
+default.debug.json

@@ -9,7 +9,7 @@
     "mariadb": {
         "user":"kim",
         "host":"localhost",
-        "database":"power",
+        "database":"",
         "socketpath":"/run/mysqld/mysqld.sock"
     },
     "detail": {
