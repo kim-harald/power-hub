@@ -1,0 +1,32 @@
+{
+    "logPath": "logs",
+    "logLevel": "info",
+    "summary": {
+        "threshold": 15768000000,
+        "schedule": "*/5 * * * *",
+        "interval": 300000
+    },
+    "mariadb": {
+        "user":"kim",
+        "host":"localhost",
+        "database":"power",
+        "socketpath":"/run/mysqld/mysqld.sock"
+    },
+    "detail": {
+        "threshold": 600000
+    },
+    "Type": "file",
+    "mqtt": {
+        "host": "mqtt://zirconum",
+        "hostname": "zirconum",
+        "username": "user",
+        "password": "password",
+        "rejectUnauthorized": false
+    },
+    "https": {
+        "port": 3422
+    },
+    "topics": {
+        "listen": "tele/sonoff1/SENSOR"
+    }
+}

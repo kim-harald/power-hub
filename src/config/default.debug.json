@@ -1,0 +1,33 @@
+{
+    "logPath": "logs",
+    "logLevel": "info",
+    "db": {
+        "DbDetails": "db/details.jsondb",
+        "DbSummary": "db/summary.jsondb",
+        "writeInterval": 900000
+    },
+    "summary" : {
+        "threshold" : 15768000000,
+        "schedule" : "*/5 * * * *",
+        "interval" : 300000
+
+    },
+    "detail": {
+        "threshold": 600000
+    }, 
+    "Type": "file",
+    "mqtt": {
+        "host": "mqtt://zirconum",
+        "hostname": "zirconum",
+        "username": "user",
+        "password": "password",
+        "rejectUnauthorized": false
+    },
+    "https": {
+        "port": 3421
+    },
+    "topics": {
+        "listen" : "tele/sonoff1/SENSOR",
+        "publish" : "tele/sonoff1/Summary"
+    } 
+}

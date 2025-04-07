@@ -1,0 +1,31 @@
+{
+  "name": "power-hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.10",
+    "@types/node-schedule": "^2.1.7",
+    "@types/spark-md5": "^3.0.5",
+    "@types/uuid": "^10.0.0",
+    "async-mqtt": "^2.6.3",
+    "axios": "^1.8.4",
+    "express": "^4.21.2",
+    "inversify": "^6.2.2",
+    "inversify-express-utils": "^6.4.10",
+    "mariadb": "^3.4.1",
+    "node-schedule": "^2.1.1",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "spark-md5": "^3.0.2",
+    "uuid": "^11.1.0",
+    "winston": "^3.17.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  }
+}
