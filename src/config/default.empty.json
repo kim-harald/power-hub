@@ -17,16 +17,16 @@
     },
     "Type": "file",
     "mqtt": {
-        "host": "mqtt://zirconum",
-        "hostname": "zirconum",
-        "username": "user",
-        "password": "password",
+        "host": "",
+        "hostname": "",
+        "username": "",
+        "password": "",
         "rejectUnauthorized": false
     },
     "https": {
-        "port": 3422
+        "port": 0
     },
     "topics": {
-        "listen": "tele/sonoff1/SENSOR"
+        "listen": ""
     }
 }

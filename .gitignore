@@ -5,3 +5,6 @@ db
 .vscode
 logs
 .env
+
+src/config/default.json
+src/config/default.debug.json
