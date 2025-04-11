@@ -1,0 +1,48 @@
+{
+    "$schema": "./migration.schema.json",
+    "migrationId": "20250409",
+    "description": "Initial migration",
+    "up": [
+        "CREATE TABLE PowerReadings(
+           Id UUID PRIMARY KEY,
+           DeviceId INT,
+           ts BIGINT,
+           Period INT)
+        CREATE TABLE PowerSummaries(
+            Id UUID PRIMARY KEY,
+            DeviceId INT,
+            ts BIGINT,
+            'when' DATETIME
+        );
+        CREATE TABLE PowerSummaryValues(
+            Id INT PRIMARY KEY AUTO_INCREMENT,
+            PowerSummaryId INT,
+            NameId INT,
+            FieldId INT,
+            'Value' DECIMAL(18,4)
+         );
+         CREATE TABLE FieldNames(
+            Id INT PRIMARY KEY,
+            FieldName NVCHAR(20)
+         );
+         CREATE TABLE Devices(
+            Id INT PRIMARY KEY AUTO_INCREMENT, 
+            DeviceName NVARCHAR(50) ,
+         );
+         ",
+         "INSERT INTO FieldNames(Id,FieldName) VALUES
+            (1,'Voltage'),
+            (2,'Current'),
+            (3,'Power'),
+            (4,'Powerfactor'),
+            (5,'Energy');
+         "
+    ],
+    "down":[]
+}
+
+/// 'voltage',
+// 'current',
+// 'power',
+// 'powerfactor',
+// 'energy',

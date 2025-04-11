@@ -1,25 +1,46 @@
-import { IDeviceRepository, IPowerReadingRepository } from ".";
-import { DateRange, PowerReading } from "../models";
+import { Result, DateRange, PowerReading, PowerSummary } from '../models';
 
+/**
+ * Interface for managing power summary services.
+ */
 export interface IPowerSummaryService {
-    // Create a power summary
-    create(summary: any): Promise<void>;
+  /**
+   * Creates a new power summary.
+   * @param summary - The PowerSummary object to create.
+   * @returns A promise that resolves when the creation is complete.
+   */
+  create(summary: PowerSummary): Promise<Result<void>>;
 
-    // Retrieve a power summary by ID
-    getOne(id: number): Promise<any>;
+  /**
+   * Retrieves a power summary by its ID.
+   * @param id - The unique identifier of the power summary.
+   * @returns A promise that resolves to the requested PowerSummary.
+   */
+  getOne(id: unknown): Promise<Result<PowerSummary>>;
 
-    // Retrieve all power summaries
-    getRange(device:string, daterange:DateRange): Promise<any[]>;
+  /**
+   * Retrieves all power summaries for a specific device and date range.
+   * @param device - The identifier of the device.
+   * @param daterange - The date range for which to retrieve power summaries.
+   * @returns A promise that resolves to an array of PowerSummary objects.
+   */
+  getRange(
+    device: string,
+    daterange: DateRange
+  ): Promise<Result<PowerSummary[]>>;
 
-    // Update a power summary by ID
-    update(id: number, summary: any): Promise<void>;
+  /**
+   * Updates an existing power summary by its ID.
+   * @param id - The unique identifier of the power summary to update.
+   * @param summary - The updated data for the power summary.
+   * @returns A promise that resolves when the update is complete.
+   */
+  update(id: unknown, summary: any): Promise<Result<void>>;
 
-    // Delete a power summary by ID
-    delete(id: number): Promise<void>;
-
-    // Retrieve the last N power summaries for a specific device
-    getLast(device: string, n: number): Promise<PowerReading[]>;
-
-    // Retrieve the last N power summaries for a specific device and date range
-    getLastInRange(device: string, n: number, daterange: DateRange): Promise<PowerReading[]>;
+  /**
+   * Deletes a power summary by its ID.
+   * @param id - The unique identifier of the power summary to delete.
+   * @returns A promise that resolves when the deletion is complete.
+   */
+  delete(id: unknown): Promise<Result<void>>;
 }
