@@ -17,7 +17,7 @@
     "async-mqtt": "^2.6.3",
     "axios": "^1.9.0",
     "express": "^5.1.0",
-    "inversify": "^7.5.2",
+    "inversify": "^7.5.4",
     "inversify-express-utils": "^6.4.10",
     "mariadb": "^3.4.2",
     "node-schedule": "^2.1.1",
